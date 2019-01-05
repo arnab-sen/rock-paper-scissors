@@ -7,7 +7,7 @@ function computerPlay() {
 }
 
 function userPlay() {
-  /*Returns the user's selection */
+  /*Returns the user's selection*/
   var choice = "";
   var validChoice = true;
   var promptMessage = "Choose between paper, scissors, and rock:";
@@ -16,7 +16,7 @@ function userPlay() {
     promptMessage = "Invalid input. Choose between paper, scissors, or rock:";
     
     if (!(choice == "paper" | choice == "scissors" | choice == "rock")) {
-    validChoice = false;
+      validChoice = false;
     } else {validChoice = true;}
   } while (validChoice == false);
    
@@ -24,7 +24,7 @@ function userPlay() {
 }
 
 function playRound(userSelection, computerSelection) {
-/* Determines the current round's winner*/
+  /* Determines the current round's winner*/
   console.log(userSelection, computerSelection);
 
   var roundChoices = `Player 1 picked ${userSelection} and player 2 picked ${computerSelection}.`;
