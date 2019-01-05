@@ -1,5 +1,5 @@
 function computerPlay() {
-  /*CPU AI, currently just returns a selection at random*/
+  /* CPU AI, currently just returns a selection at random */
   var choices = ["paper", "scissors", "rock"];
   var choice = choices[Math.floor(Math.random() * 3)];
 
@@ -7,7 +7,7 @@ function computerPlay() {
 }
 
 function userPlay() {
-  /*Returns the user's selection*/
+  /* Returns the user's selection */
   var choice = "";
   var validChoice = true;
   var promptMessage = "Choose between paper, scissors, and rock:";
@@ -24,7 +24,7 @@ function userPlay() {
 }
 
 function playRound(userSelection, computerSelection) {
-  /* Determines the current round's winner*/
+  /* Determines the current round's winner */
   console.log(userSelection, computerSelection);
 
   var roundChoices = `Player 1 picked ${userSelection} and player 2 picked ${computerSelection}.`;
@@ -41,7 +41,7 @@ function playRound(userSelection, computerSelection) {
 }
 
 while (true) {
-  /* Main loop; cancel dialogue box to quit*/
+  /* Main loop; cancel dialogue box to quit */
   var p1 = userPlay();
   var cpu = computerPlay();
   playRound(p1, cpu);
