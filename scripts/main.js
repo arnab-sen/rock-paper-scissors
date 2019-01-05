@@ -14,10 +14,11 @@ function userPlay() {
   do {
     choice = prompt(promptMessage).toLowerCase();
     promptMessage = "Invalid input. Choose between paper, scissors, or rock:";
-    
     if (!(choice == "paper" | choice == "scissors" | choice == "rock")) {
       validChoice = false;
-    } else {validChoice = true;}
+    } else {
+      validChoice = true;
+    }
   } while (validChoice == false);
    
   return choice;
