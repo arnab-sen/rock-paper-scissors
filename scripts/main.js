@@ -24,9 +24,10 @@ function userPlay() {
   return choice;
 }
 
-function playRound(userSelection, computerSelection) {
+function playRound(userSelection, computerSelection = null) {
   /* Determines the current round's winner */
-  console.log(userSelection, computerSelection);
+  //console.log(userSelection, computerSelection);
+  if (computerSelection == null) computerSelection = computerPlay();
 
   var roundChoices = `Player 1 picked ${userSelection} and player 2 picked ${computerSelection}.`;
   var weaknesses = {"paper" : "scissors",
@@ -41,7 +42,15 @@ function playRound(userSelection, computerSelection) {
   }
 }
 
-while (true) {
+var buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", e => {
+    playRound(button.id)
+    });
+});
+
+// Prompt-based rounds are disabled
+while (false) {
   /* Main loop; cancel dialogue box to quit */
   var p1 = userPlay();
   var cpu = computerPlay();
